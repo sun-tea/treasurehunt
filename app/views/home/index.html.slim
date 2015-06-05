@@ -40,9 +40,23 @@
           p
           	.input-group.input-group-lg
       				span.input-group-addon#twitter = icon('twitter')
-      				input type="text" class="form-control" placeholder="Plat" aria-describedby="twitter"
+                    input type="text" class="form-control" placeholder="Plat" aria-describedby="twitter"
+
+      h4 = "Progression"
+      .progress
+        .progress-bar.progress-bar-striped.active aria-valuemax="100" aria-valuemin="0" aria-valuenow="2" role="progressbar" style=("width: 2%")
+          span.sr-only 2% Complete
+
       footer.footer
-        p
-        	= icon('copyright')
-        	= " COMPTOIRSECU // TEAM CHAT // LES MERGUEZ // VAGINA DENTATA"
+        .navbar.navbar-default
+          .navbar-header
+            a.navbar-brand = "Merguez!"
+          .collapse.navbar-collapse
+            ul.nav.navbar-nav
+              li.active
+                a href="http://comptoirsecu.fr" comptoirsecu.fr
+              li
+                a href="http://lesmerguez.net" lesmerguez.net
+              li
+                a href="http://tesfess.es" tesfess.es
 /! /container
