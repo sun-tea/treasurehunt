@@ -1,0 +1,51 @@
+.container
+  .header.clearfix
+    / nav
+    /   ul.nav.nav-pills.pull-right
+    /     li.active role="presentation" 
+    /       a href="#"  Home
+    /     li role="presentation" 
+    /       a href="#"  About
+    /     li role="presentation" 
+    /       a href="#"  Contact
+    / h3.text-muted Project name
+  .jumbotron
+    h1
+    	= "Mot de passe oublié ?"
+    p.lead
+    	= "Encore bu trop de rhum? Tape les réponses aux 4 questions secrètes pour retrouver le code du coffre..."
+    / p
+    /   a.btn.btn-lg.btn-success href="#" role="button"  Sign up today
+  .row.marketing
+    .col-lg-6.col-md-6
+      h4 = "Question 1"
+      p 
+      	.input-group.input-group-lg
+  				span.input-group-addon#fb
+  					= icon('facebook')
+  				input type="text" class="form-control" placeholder="RROUT" aria-describedby="fb"
+      h4 = "Question 2"
+      p
+      	.input-group.input-group-lg
+  				span.input-group-addon#instagram
+  					= icon('instagram')
+  				input type="text" class="form-control" placeholder="RROUT" aria-describedby="instagram"
+
+    .col-lg-6.col-md-6
+      h4 = "Question 3"
+      p
+      	.input-group.input-group-lg
+  				span.input-group-addon#lastfm
+  					= icon('lastfm')
+  				input type="text" class="form-control" placeholder="RROUT" aria-describedby="lastfm"
+  		h4 = "Question 4"
+      p
+      	.input-group.input-group-lg
+  				span.input-group-addon#twitter
+  					= icon('twitter')
+  				input type="text" class="form-control" placeholder="RROUT" aria-describedby="twitter"
+  footer.footer
+    p
+    	= icon('copyright')
+    	= " PROUT"
+/! /container
