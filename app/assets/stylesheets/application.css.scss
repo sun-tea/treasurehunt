@@ -22,3 +22,52 @@
  */
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+.notices {
+  border-radius: 10px !important;
+  position: fixed;
+  bottom: 40px;
+  z-index: 9999;
+  right: 30px;
+
+  box-shadow: 0 14px 14px fade-out(black, 75 / 100), 0 10px 5px fade-out(black, 78 / 100);
+
+  button.close {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    opacity: 0.7;
+    display: block;
+    height: 25px;
+    position: absolute;
+    right: 0px;
+    text-decoration: none solid rgb(255, 255, 255);
+    top: 0px;
+    width: 25px;
+    perspective-origin: 14px 17.5px;
+    transform-origin: 14px 17.5px;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal bold 20px/20px OpenSans;
+    list-style: none outside none;
+    margin: 0px;
+    outline: rgb(255, 255, 255) none 0px;
+  }/*#BUTTON_3*/
+
+  .alert {
+    padding: 10px 20px;
+    text-align: left;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+
+    &.alert-info{
+      background: #4EE8AC none repeat-x scroll 0% 0% / auto padding-box border-box;
+      color: #FFF;
+    }
+
+    &.alert-danger{
+      background: #FF6752 none repeat-x scroll 0% 0% / auto padding-box border-box;
+      color: #FFF;
+    }
+  }
+}

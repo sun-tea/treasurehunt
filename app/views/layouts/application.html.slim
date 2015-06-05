@@ -6,4 +6,9 @@ html
     / == javascript_include_tag 'application', 'data-turbolinks-track' => true
     == csrf_meta_tags
   body
+  	.notices
+      - if flash[:notice]
+        .alert.alert-info
+          button.close {:type => 'button', :data => {:dismiss => 'alert'}}
+          = t('notice', :alert => alert, :notice => flash[:notice])
   	== yield
