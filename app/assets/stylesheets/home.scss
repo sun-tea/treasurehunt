@@ -2,9 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 // MI MI MI TEST
-.jumbotron {
-	background-color: #000;
+body {
+    background: #fff url("/assets/pattern.jpg") repeat;
+    .panel-default {
+        margin-top: 10px;
+    }
 }
-
 
 // MI FIN DU TEST
