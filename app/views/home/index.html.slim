@@ -103,14 +103,13 @@
                   = text_field_tag "twitter", nil, class: "form-control", placeholder: Answer.find_by(title: "twitter").value, disabled: true
                   span.input-group-addon#twitter-validate.validated
                     = icon('check')
-        - if @counter == 4
-          .col-lg-12.col-md-12.col-sm-12.col-xs-12
-            h2.text-center = "BWAVO !!!"
-            p
-              = form_tag check_path(), method: 'get', multipart: true do
-                .input-group.input-group-lg
-                  span.input-group-addon#twitter
-                  = text_field_tag "twitter", nil, class: "form-control", placeholder: Answer.find_by(title: "treasure").value, disabled: true
+        .col-lg-12.col-md-12.col-sm-12.col-xs-12
+          br
+          - if @counter == 4
+            .alert.alert-success.text-center
+              h1 = "BWAVO !!!"
+              p
+                h2 = Answer.find_by(title: "treasure").value
 
       br
 
