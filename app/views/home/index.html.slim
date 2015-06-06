@@ -103,6 +103,14 @@
                   = text_field_tag "twitter", nil, class: "form-control", placeholder: Answer.find_by(title: "twitter").value, disabled: true
                   span.input-group-addon#twitter-validate.validated
                     = icon('check')
+        - if @counter == 4
+          .col-lg-12.col-md-12.col-sm-12.col-xs-12
+            h2.text-center = "BWAVO !!!"
+            p
+              = form_tag check_path(), method: 'get', multipart: true do
+                .input-group.input-group-lg
+                  span.input-group-addon#twitter
+                  = text_field_tag "twitter", nil, class: "form-control", placeholder: Answer.find_by(title: "treasure").value, disabled: true
 
         - if flash[:notice]
           p class='notice'
@@ -110,8 +118,8 @@
 
       h4 = "Progression"
       .progress
-        .progress-bar.progress-bar-striped.active aria-valuemax="100" aria-valuemin="0" aria-valuenow="2" role="progressbar" style=("width: 2%")
-          span.sr-only 2% Complete
+        .progress-bar.progress-bar-striped.active aria-valuemax="100" aria-valuemin="0" aria-valuenow="2" role="progressbar" style=("width: #{@counter*100/4}%")
+          span.sr-only #{@counter*100/4}% Complete
 
 
 /! /container

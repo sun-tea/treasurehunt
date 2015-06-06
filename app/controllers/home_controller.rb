@@ -12,7 +12,7 @@ class HomeController < ApplicationController
 				session[:facebook] = true
   			redirect_to :back, notice: 'Bwavooooo'
     	else
-  			redirect_to :back, notice: 'Loser.'
+  			redirect_to :back, alert: 'Loser.'
 			end
 		elsif params.has_key?(:instagram)
 			if Answer.find_by(title: "instagram").value.downcase == params[:instagram].strip.downcase
@@ -20,7 +20,7 @@ class HomeController < ApplicationController
 				session[:instagram] = true
   			redirect_to :back, notice: 'Bwavooooo'
     	else
-  			redirect_to :back, notice: 'Loser.'
+  			redirect_to :back, alert: 'Loser.'
 			end
 		elsif params.has_key?(:lastfm)
 			if Answer.find_by(title: "lastfm").value.downcase == params[:lastfm].strip.downcase
@@ -28,7 +28,7 @@ class HomeController < ApplicationController
 				session[:lastfm] = true
   			redirect_to :back, notice: 'Bwavooooo'
     	else
-  			redirect_to :back, notice: 'Loser.'
+  			redirect_to :back, alert: 'Loser.'
 			end
 		elsif params.has_key?(:twitter)
 			if params[:twitter].strip.downcase.include? Answer.find_by(title: "twitter").value.downcase
@@ -36,7 +36,7 @@ class HomeController < ApplicationController
 				session[:twitter] = true
   			redirect_to :back, notice: 'Bwavooooo'
     	else
-  			redirect_to :back, notice: 'Loser.'
+  			redirect_to :back, alert: 'Loser.'
 			end
 		end
 

@@ -12,7 +12,8 @@ answers = [
         {:title => "facebook", :value => "03-06"},
         {:title => "instagram", :value => "Colonie"},
         {:title => "lastfm", :value => "True Survivor"},
-        {:title => "twitter", :value => "Merguez"}
+        {:title => "twitter", :value => "Merguez"},
+        {:title => "treasure", :value => "1234"}
 ]
 
 created_elems = 0
