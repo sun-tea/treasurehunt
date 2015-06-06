@@ -34,21 +34,37 @@
           h4 = "Où est-ce que j'habite ?"
           p
             .input-group.input-group-lg
-      				span.input-group-addon#instagram = icon('instagram')
-      				input type="text" class="form-control" placeholder="Nom de la Rue" aria-describedby="instagram"
+      		  span.input-group-addon#instagram = icon('instagram')
+      		  span.input-group-addon#instagram-hint
+                button data-target="#indice2" data-toggle="modal" type="button"  Indice
+                .modal.fade#indice2 aria-hidden="true" aria-labelledby="myIndice2" role="dialog" tabindex="-1"
+                  .modal-dialog
+                    img src="/assets/pattern.jpg"
+
+      		  input type="text" class="form-control" placeholder="Nom de la rue" aria-describedby="instagram"
 
         .col-lg-6.col-md-6.col-sm-12.col-xs-12
           h4 = "Quelle est mon morceau préféré ?"
           p
           	.input-group.input-group-lg
-      				span.input-group-addon#lastfm = icon('lastfm')
-      				input type="text" class="form-control" placeholder="Nom du Morceau" aria-describedby="lastfm"
+      		  span.input-group-addon#lastfm = icon('lastfm')
+      		  span.input-group-addon#lastfm-hint
+                button data-target="#indice3" data-toggle="modal" type="button"  Indice
+                .modal.fade#indice3 aria-hidden="true" aria-labelledby="myIndice3" role="dialog" tabindex="-1"
+                  .modal-dialog
+                    img src="/assets/pattern.jpg"
+      		  input type="text" class="form-control" placeholder="Nom du morceau" aria-describedby="lastfm"
         .col-lg-6.col-md-6.col-sm-12.col-xs-12
       	  h4 = "Quel est mon plat favori ?"
           p
           	.input-group.input-group-lg
-      				span.input-group-addon#twitter = icon('twitter')
-      				input type="text" class="form-control" placeholder="Plat" aria-describedby="twitter"
+      		  span.input-group-addon#twitter = icon('twitter')
+      		  span.input-group-addon#twitter-hint
+                button data-target="#indice4" data-toggle="modal" type="button"  Indice
+                .modal.fade#indice4 aria-hidden="true" aria-labelledby="myIndice4" role="dialog" tabindex="-1"
+                  .modal-dialog
+                    img src="/assets/pattern.jpg"
+      		  input type="text" class="form-control" placeholder="Plat" aria-describedby="twitter"
         - if flash[:notice]
           p class='notice'
             h = flash[:notice]
@@ -57,6 +73,9 @@
       .progress
         .progress-bar.progress-bar-striped.active aria-valuemax="100" aria-valuemin="0" aria-valuenow="2" role="progressbar" style=("width: 2%")
           span.sr-only 2% Complete
+
+
+
 
 /! /container
 nav.navbar.navbar-inverse.navbar-fixed-bottom
