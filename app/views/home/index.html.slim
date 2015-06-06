@@ -1,4 +1,4 @@
-.container-fluid
+.container
   .panel.panel-default
     .panel-body
       .header.clearfix
@@ -70,15 +70,20 @@
 /! /container
 nav.navbar.navbar-inverse.navbar-fixed-bottom
   .container
-    .container-fluid
-      .navbar-header
-        a.navbar-brand = "Merguez!"
-      .collapse.navbar-collapse#footy
-        ul.nav.navbar-nav
-          li.active
-            a href="http://comptoirsecu.fr" comptoirsecu.fr
-          li
-            a href="http://lesmerguez.net" lesmerguez.net
-          li
-            a href="http://tesfess.es" tesfess.es
-        p.navbar-text.navbar-right Make with love by Team Cats // Le Comptoir Sécu
+    .navbar-header
+      button.navbar-toggle.collapsed data-target="#footy" data-toggle="collapse" type="button"
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand = "Merguez!"
+    .collapse.navbar-collapse#footy
+      ul.nav.navbar-nav
+        li.active
+          a href="http://comptoirsecu.fr" comptoirsecu.fr
+        li
+          a href="http://lesmerguez.net" lesmerguez.net
+        li
+          a href="http://tesfess.es" tesfess.es
+      p.navbar-text.navbar-right Make with love by Team Cats // Le Comptoir Sécu
+
