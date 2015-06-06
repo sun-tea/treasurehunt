@@ -18,29 +18,36 @@
         / p
         /   a.btn.btn-lg.btn-success href="#" role="button"  Sign up today
       .row.marketing
-        .col-lg-6.col-md-6
-          h4 = "Quelle est la date de mon anniversaire ?"
+        .col-lg-6.col-md-6.col-sm-12.col-xs-12
+          h4 = "Où est-ce que j'habite ?"
           p
-            .input-group.input-group-lg
-      				span.input-group-addon#fb = icon('facebook')
-      				input type="text" class="form-control" placeholder="JJ-MM" aria-describedby="fb"
+            .input-group
+              span.input-group-addon $
+              input.form-control aria-label=("Amount (to the nearest dollar)") type="text" /
+              span.input-group-addon .00
+
+        .col-lg-6.col-md-6.col-sm-12.col-xs-12
           h4 = "Où est-ce que j'habite ?"
           p
             .input-group.input-group-lg
       				span.input-group-addon#instagram = icon('instagram')
-      				input type="text" class="form-control" placeholder="Nom de la Rue" aria-describedby="instagram"
+      				input type="text" class="form-control" placeholder="Nom de la Rue" aria-describedby="instagram" /
 
-        .col-lg-6.col-md-6
+        .col-lg-6.col-md-6.col-sm-12.col-xs-12
           h4 = "Quelle est mon morceau préféré ?"
           p
           	.input-group.input-group-lg
       				span.input-group-addon#lastfm = icon('lastfm')
       				input type="text" class="form-control" placeholder="Nom du Morceau" aria-describedby="lastfm"
+        .col-lg-6.col-md-6.col-sm-12.col-xs-12
       	  h4 = "Quel est mon plat favori ?"
           p
           	.input-group.input-group-lg
       				span.input-group-addon#twitter = icon('twitter')
-                    input type="text" class="form-control" placeholder="Plat" aria-describedby="twitter"
+      				input type="text" class="form-control" placeholder="Plat" aria-describedby="twitter"
+        - if flash[:notice]
+          p class='notice'
+            h = flash[:notice]
 
       h4 = "Progression"
       .progress
