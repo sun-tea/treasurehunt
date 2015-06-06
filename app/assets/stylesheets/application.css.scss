@@ -23,6 +23,13 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+
+span.input-group-addon button {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
 .notices {
   border-radius: 10px !important;
   position: fixed;

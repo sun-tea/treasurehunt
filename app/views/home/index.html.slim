@@ -19,19 +19,23 @@
         /   a.btn.btn-lg.btn-success href="#" role="button"  Sign up today
       .row.marketing
         .col-lg-6.col-md-6.col-sm-12.col-xs-12
-          h4 = "Où est-ce que j'habite ?"
+          h4 = "Quelle est la date de mon anniversaire ?"
           p
-            .input-group
-              span.input-group-addon $
-              input.form-control aria-label=("Amount (to the nearest dollar)") type="text" /
-              span.input-group-addon .00
+            = form_tag check_path(), method: 'get', multipart: true do
+              .input-group.input-group-lg
+                span.input-group-addon#fb = icon('facebook')
+                = text_field_tag "facebook", nil, class: "form-control", placeholder: "JJ-MM"
+                span.input-group-addon#fb-validate
+                  button
+                    = icon('check')
+              / button = "Validay"
 
         .col-lg-6.col-md-6.col-sm-12.col-xs-12
           h4 = "Où est-ce que j'habite ?"
           p
             .input-group.input-group-lg
       				span.input-group-addon#instagram = icon('instagram')
-      				input type="text" class="form-control" placeholder="Nom de la Rue" aria-describedby="instagram" /
+      				input type="text" class="form-control" placeholder="Nom de la Rue" aria-describedby="instagram"
 
         .col-lg-6.col-md-6.col-sm-12.col-xs-12
           h4 = "Quelle est mon morceau préféré ?"
