@@ -24,6 +24,11 @@
             = form_tag check_path(), method: 'get', multipart: true do
               .input-group.input-group-lg
                 span.input-group-addon#fb = icon('facebook')
+                span.input-group-addon#fb-hint
+                  button data-target="#indice1" data-toggle="modal" type="button"  Indice
+                  .modal.fade#indice1 aria-hidden="true" aria-labelledby="myIndice1" role="dialog" tabindex="-1"
+                    .modal-dialog
+                      img src="/assets/indice1.png"
                 - if session[:facebook].nil?
                   = text_field_tag "facebook", nil, class: "form-control", placeholder: "JJ-MM"
                   span.input-group-addon#fb-validate
@@ -42,6 +47,11 @@
             = form_tag check_path(), method: 'get', multipart: true do
               .input-group.input-group-lg
                 span.input-group-addon#instagram = icon('instagram')
+                span.input-group-addon#instagram-hint
+                  button data-target="#indice2" data-toggle="modal" type="button"  Indice
+                  .modal.fade#indice2 aria-hidden="true" aria-labelledby="myIndice2" role="dialog" tabindex="-1"
+                    .modal-dialog
+                      img src="/assets/indice2.png"
                 - if session[:instagram].nil?
                   = text_field_tag "instagram", nil, class: "form-control", placeholder: "Nom de la Rue"
                   span.input-group-addon#instagram-validate
@@ -58,6 +68,11 @@
             = form_tag check_path(), method: 'get', multipart: true do
               .input-group.input-group-lg
                 span.input-group-addon#lastfm = icon('lastfm')
+                span.input-group-addon#lastfm-hint
+                  button data-target="#indice3" data-toggle="modal" type="button"  Indice
+                  .modal.fade#indice3 aria-hidden="true" aria-labelledby="myIndice3" role="dialog" tabindex="-1"
+                    .modal-dialog
+                      img src="/assets/indice3.jpg"
                 - if session[:lastfm].nil?
                   = text_field_tag "lastfm", nil, class: "form-control", placeholder: "Nom du Morceau"
                   span.input-group-addon#lastfm-validate
@@ -74,6 +89,11 @@
             = form_tag check_path(), method: 'get', multipart: true do
               .input-group.input-group-lg
                 span.input-group-addon#twitter = icon('twitter')
+                span.input-group-addon#twitter-hint
+                  button data-target="#indice4" data-toggle="modal" type="button"  Indice
+                  .modal.fade#indice4 aria-hidden="true" aria-labelledby="myIndice4" role="dialog" tabindex="-1"
+                    .modal-dialog
+                      img src="/assets/indice4.png"
                 - if session[:twitter].nil?
                   = text_field_tag "twitter", nil, class: "form-control", placeholder: "Plat"
                   span.input-group-addon#twitter-validate

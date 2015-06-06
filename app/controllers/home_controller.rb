@@ -31,7 +31,7 @@ class HomeController < ApplicationController
   			redirect_to :back, notice: 'Loser.'
 			end
 		elsif params.has_key?(:twitter)
-			if Answer.find_by(title: "twitter").value.downcase.include? params[:twitter].strip.downcase
+			if params[:twitter].strip.downcase.include? Answer.find_by(title: "twitter").value.downcase
 				session[:answer_counter] += 1
 				session[:twitter] = true
   			redirect_to :back, notice: 'Bwavooooo'
