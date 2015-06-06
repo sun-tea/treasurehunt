@@ -28,27 +28,37 @@
                 span.input-group-addon#fb-validate
                   button
                     = icon('check')
-              / button = "Validay"
-
         .col-lg-6.col-md-6.col-sm-12.col-xs-12
           h4 = "Où est-ce que j'habite ?"
           p
-            .input-group.input-group-lg
-      				span.input-group-addon#instagram = icon('instagram')
-      				input type="text" class="form-control" placeholder="Nom de la Rue" aria-describedby="instagram"
+            = form_tag check_path(), method: 'get', multipart: true do
+              .input-group.input-group-lg
+                span.input-group-addon#instagram = icon('instagram')
+                = text_field_tag "instagram", nil, class: "form-control", placeholder: "Nom de la Rue"
+                span.input-group-addon#instagram-validate
+                  button
+                    = icon('check')
+        .col-lg-6.col-md-6.col-sm-12.col-xs-12
+          h4 = "Quelle est la date de mon anniversaire ?"
+          p
+            = form_tag check_path(), method: 'get', multipart: true do
+              .input-group.input-group-lg
+                span.input-group-addon#lastfm = icon('lastfm')
+                = text_field_tag "lastfm", nil, class: "form-control", placeholder: "Nom du Morceau"
+                span.input-group-addon#lastfm-validate
+                  button
+                    = icon('check')
+        .col-lg-6.col-md-6.col-sm-12.col-xs-12
+          h4 = "Quel est mon plat favori ?"
+          p
+            = form_tag check_path(), method: 'get', multipart: true do
+              .input-group.input-group-lg
+                span.input-group-addon#twitter = icon('twitter')
+                = text_field_tag "twitter", nil, class: "form-control", placeholder: "Plat"
+                span.input-group-addon#twitter-validate
+                  button
+                    = icon('check')
 
-        .col-lg-6.col-md-6.col-sm-12.col-xs-12
-          h4 = "Quelle est mon morceau préféré ?"
-          p
-          	.input-group.input-group-lg
-      				span.input-group-addon#lastfm = icon('lastfm')
-      				input type="text" class="form-control" placeholder="Nom du Morceau" aria-describedby="lastfm"
-        .col-lg-6.col-md-6.col-sm-12.col-xs-12
-      	  h4 = "Quel est mon plat favori ?"
-          p
-          	.input-group.input-group-lg
-      				span.input-group-addon#twitter = icon('twitter')
-      				input type="text" class="form-control" placeholder="Plat" aria-describedby="twitter"
         - if flash[:notice]
           p class='notice'
             h = flash[:notice]
@@ -57,7 +67,6 @@
       .progress
         .progress-bar.progress-bar-striped.active aria-valuemax="100" aria-valuemin="0" aria-valuenow="2" role="progressbar" style=("width: 2%")
           span.sr-only 2% Complete
-
 /! /container
 nav.navbar.navbar-inverse.navbar-fixed-bottom
   .container
