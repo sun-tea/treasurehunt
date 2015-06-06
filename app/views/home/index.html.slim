@@ -53,7 +53,7 @@
                     .modal-dialog
                       img src="/assets/indice2.png"
                 - if session[:instagram].nil?
-                  = text_field_tag "instagram", nil, class: "form-control", placeholder: "Nom de la Rue"
+                  = text_field_tag "instagram", nil, class: "form-control", placeholder: "Rue"
                   span.input-group-addon#instagram-validate
                     button
                       = icon('check')
@@ -74,7 +74,7 @@
                     .modal-dialog
                       img src="/assets/indice3.jpg"
                 - if session[:lastfm].nil?
-                  = text_field_tag "lastfm", nil, class: "form-control", placeholder: "Nom du Morceau"
+                  = text_field_tag "lastfm", nil, class: "form-control", placeholder: "Morceau"
                   span.input-group-addon#lastfm-validate
                     button
                       = icon('check')
@@ -137,7 +137,7 @@ nav.navbar.navbar-inverse.navbar-fixed-bottom
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand = "Merguez!"
+      a.navbar-brand = "LES MERGUEZ 2015"
     .collapse.navbar-collapse#footy
       ul.nav.navbar-nav
         li.active
@@ -146,5 +146,5 @@ nav.navbar.navbar-inverse.navbar-fixed-bottom
           a href="http://lesmerguez.net" lesmerguez.net
         li
           a href="http://tesfess.es" tesfess.es
-      p.navbar-text.navbar-right Make with love by Team Cats // Le Comptoir Sécu
+      p.navbar-text.navbar-right Team Cats // Le Comptoir Sécu
 
