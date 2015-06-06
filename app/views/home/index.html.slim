@@ -112,9 +112,15 @@
                   span.input-group-addon#twitter
                   = text_field_tag "twitter", nil, class: "form-control", placeholder: Answer.find_by(title: "treasure").value, disabled: true
 
-        - if flash[:notice]
-          p class='notice'
-            h = flash[:notice]
+      br
+
+      - if flash[:notice]
+        .notice.alert.alert-success
+          strong = flash[:notice]
+
+      - if flash[:alert]
+        .notice.alert.alert-danger
+          strong = flash[:alert]
 
       h4 = "Progression"
       .progress
