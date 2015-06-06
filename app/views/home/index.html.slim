@@ -24,19 +24,32 @@
             = form_tag check_path(), method: 'get', multipart: true do
               .input-group.input-group-lg
                 span.input-group-addon#fb = icon('facebook')
-                = text_field_tag "facebook", nil, class: "form-control", placeholder: "JJ-MM"
-                span.input-group-addon#fb-validate
-                  button
+                - if session[:facebook].nil?
+                  = text_field_tag "facebook", nil, class: "form-control", placeholder: "JJ-MM"
+                  span.input-group-addon#fb-validate
+                    button
+                      = icon('check')
+                - else
+                  = text_field_tag "facebook", nil, class: "form-control", placeholder: Answer.find_by(title: "facebook").value, disabled: true
+                  span.input-group-addon#fb-validate.validated
                     = icon('check')
+
+                / span.input-group-addon#fb-validate class=(session[:facebook].nil? ? "" : "validated")
+
         .col-lg-6.col-md-6.col-sm-12.col-xs-12
           h4 = "Où est-ce que j'habite ?"
           p
             = form_tag check_path(), method: 'get', multipart: true do
               .input-group.input-group-lg
                 span.input-group-addon#instagram = icon('instagram')
-                = text_field_tag "instagram", nil, class: "form-control", placeholder: "Nom de la Rue"
-                span.input-group-addon#instagram-validate
-                  button
+                - if session[:instagram].nil?
+                  = text_field_tag "instagram", nil, class: "form-control", placeholder: "Nom de la Rue"
+                  span.input-group-addon#instagram-validate
+                    button
+                      = icon('check')
+                - else
+                  = text_field_tag "instagram", nil, class: "form-control", placeholder: Answer.find_by(title: "instagram").value, disabled: true
+                  span.input-group-addon#instagram-validate.validated
                     = icon('check')
         .col-lg-6.col-md-6.col-sm-12.col-xs-12
           h4 = "Quelle est mon morceau préféré ?"
@@ -44,9 +57,14 @@
             = form_tag check_path(), method: 'get', multipart: true do
               .input-group.input-group-lg
                 span.input-group-addon#lastfm = icon('lastfm')
-                = text_field_tag "lastfm", nil, class: "form-control", placeholder: "Nom du Morceau"
-                span.input-group-addon#lastfm-validate
-                  button
+                - if session[:lastfm].nil?
+                  = text_field_tag "lastfm", nil, class: "form-control", placeholder: "Nom du Morceau"
+                  span.input-group-addon#lastfm-validate
+                    button
+                      = icon('check')
+                - else
+                  = text_field_tag "lastfm", nil, class: "form-control", placeholder: Answer.find_by(title: "lastfm").value, disabled: true
+                  span.input-group-addon#lastfm-validate.validated
                     = icon('check')
         .col-lg-6.col-md-6.col-sm-12.col-xs-12
           h4 = "Quel est mon plat favori ?"
@@ -54,9 +72,14 @@
             = form_tag check_path(), method: 'get', multipart: true do
               .input-group.input-group-lg
                 span.input-group-addon#twitter = icon('twitter')
-                = text_field_tag "twitter", nil, class: "form-control", placeholder: "Plat"
-                span.input-group-addon#twitter-validate
-                  button
+                - if session[:twitter].nil?
+                  = text_field_tag "twitter", nil, class: "form-control", placeholder: "Plat"
+                  span.input-group-addon#twitter-validate
+                    button
+                      = icon('check')
+                - else
+                  = text_field_tag "twitter", nil, class: "form-control", placeholder: Answer.find_by(title: "twitter").value, disabled: true
+                  span.input-group-addon#twitter-validate.validated
                     = icon('check')
 
         - if flash[:notice]

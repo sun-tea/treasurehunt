@@ -30,6 +30,10 @@ span.input-group-addon button {
   background: none;
 }
 
+.input-group-addon.validated {
+  color: #28A55F;
+}
+
 .notices {
   border-radius: 10px !important;
   position: fixed;

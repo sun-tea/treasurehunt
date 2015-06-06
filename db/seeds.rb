@@ -10,7 +10,7 @@ logger.debug('- - - - - - - - - - - - - - - - - - - - - - - - - -')
 
 answers = [
         {:title => "facebook", :value => "03-06"},
-        {:title => "instagram", :value => "Rue de la Colonie"},
+        {:title => "instagram", :value => "Colonie"},
         {:title => "lastfm", :value => "True Survivor"},
         {:title => "twitter", :value => "Merguez"}
 ]
