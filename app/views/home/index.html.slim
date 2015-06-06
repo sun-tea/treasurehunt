@@ -104,9 +104,15 @@
                   span.input-group-addon#twitter-validate.validated
                     = icon('check')
 
-        - if flash[:notice]
-          p class='notice'
-            h = flash[:notice]
+      br
+
+      - if flash[:notice]
+        .notice.alert.alert-success
+          strong = flash[:notice]
+
+      - if flash[:alert]
+        .notice.alert.alert-danger
+          strong = flash[:alert]
 
       h4 = "Progression"
       .progress
